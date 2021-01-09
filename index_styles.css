@@ -562,17 +562,17 @@
 
 
 
-.btn3{
-    position: absolute;
-    left: 65%;
-    top: 58%;
-}
+	.btn3{
+    		position: absolute;
+    		left: 65%;
+    		top: 58%;
+	}
 
 
-.btn3 button{
-    font-size: 20px;
-    padding: 20px 50px;
-}  
+	.btn3 button{
+    		font-size: 20px;
+    		padding: 20px 50px;
+	}  
 
     	.fa-bars{
         	position: absolute;
@@ -628,7 +628,7 @@
 
     	.blood_reqst{
         	position: absolute;
-		margin-top: 800px;
+		margin-top: 1000px;
         	margin-left: 620px; 
    	}
 
