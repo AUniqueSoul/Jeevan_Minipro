@@ -1,0 +1,159 @@
+body{
+    background-image: url("pic5.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+.title{
+    float: inherit;
+    color: darkred;
+    text-align: center;
+}
+.bg{
+    width: 700px;
+    position: relative;
+    top: 10%;
+    left: 28%;
+}
+.a1{
+    padding: 30px 30px;
+    border: 1px solid black;
+    background: white;
+    color: red;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+.a0{
+    position: absolute;
+    top: -70%;
+    left: 69%;
+    padding: 30px 30px;
+    border: 1px solid black;
+    background: white;
+    color: red;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+.b1{
+    position: absolute;
+    top: 200%;
+    left: -0%;
+    padding: 30px 30px;
+    border: 1px solid black;
+    background: white;
+    color: red;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+.b0{
+    position: absolute;
+    top: 200%;
+    left: 69%;
+    padding: 30px 30px;
+    border: 1px solid black;
+    background: white;
+    color: red;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+.o1{
+    position: absolute;
+    top: 470%;
+    left: -0%;
+    padding: 30px 30px;
+    border: 1px solid black;
+    background: white;
+    color: red;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+.o0{
+    position: absolute;
+    top: 470%;
+    left: 69%;
+    padding: 30px 30px;
+    border: 1px solid black;
+    background: white;
+    color: red;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+.ab1{
+    position: absolute;
+    top: 750%;
+    left: -0%;
+    padding: 30px 20px;
+    border: 1px solid black;
+    background: white;
+    color: red;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+.ab0{
+    position: absolute;
+    top: 750%;
+    left: 69%;
+    padding: 30px 20px;
+    border: 1px solid black;
+    background: white;
+    color: red;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+}
+.bq{
+    position: absolute;
+    top: 600px;
+    left: 5%;
+}
+.bq a{
+    padding: 30px 30px;
+    border: 1px solid black;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.bb{
+    position: absolute;
+    top: 600px;
+    left: 76%;
+}
+.bb a{
+    padding: 30px 30px;
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+} 
+
+
+@media screen and (max-width: 1080px) {
+.bq{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+}
+.bq a{
+}
+.bb{
+    position: absolute;
+    top: 80%;
+    left: 60%;
+}
+.bb a{
+} 
+body{
+    background-image: url("pic2.png");
+}

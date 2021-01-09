@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="post_blood_request_styles.css">
+</head>
+<body>
+    <h2 id="title">Post Blood Request</h2>
+    <div class="container">
+        <div class="row">
+                <div class="col-25">
+                    <label for="fname">Title</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="title" name="title" placeholder="Your title..">
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-25">
+                      <label for="bg">Blood Group</label>
+                </div>
+                    <div class="col-75">
+                        <input type="radio" id="A+" name="bg" value="A+">
+                        <label for="A+">A+</label>
+                        <input type="radio" id="A-" name="bg" value="A-">
+                        <label for="A-">A-</label><br>
+                        <input type="radio" id="B+" name="bg" value="B+">
+                        <label for="B+">B+</label>
+                        <input type="radio" id="B-" name="bg" value="B-">
+                        <label for="B-">B-</label><br>
+                        <input type="radio" id="O+" name="bg" value="O+">
+                        <label for="O+">O+</label>
+                        <input type="radio" id="O-" name="bg" value="O-">
+                        <label for="O-">O-</label><br>
+                        <input type="radio" id="AB+" name="bg" value="AB+">
+                        <label for="AB+">AB+</label>
+                        <input type="radio" id="AB-" name="bg" value="AB-">
+                        <label for="AB-">AB-</label><br>
+                    </div>
+                  </div>
+                     <div class="row">
+                <div class="col-25">
+                    <label for="qty">Blood Quantity</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="qty" name="qty" placeholder="Select" size="2" step="1" min="1" max="99">
+                </div>
+                </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Requiring Date</label>
+                        </div>
+                        <div class="col-75">
+                             <input type="date" id="date" name="date">
+                        </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="phn">Phone no</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="tel" id="phn" name="phn" size="11" maxlength="11" placeholder="1234-5678" pattern="[0-9]{5}-[0-9]{5}">
+                    </div>
+                  </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="addr">Address</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="addr" placeholder="Address..." rows="1"></textarea>
+                        </div>
+                  </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="addr">Description</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="des" placeholder="Description..." rows="3"></textarea>
+                        </div>
+                  </div><br><br><br>
+                  <div class="row">
+                    <input type="submit" value="Submit" onclick="storeData()">
+                    <input type="reset">
+                  </div>
+    </div>
+    <script>
+          var firebaseConfig = {
+                apiKey: "AIzaSyB2tqT6i4RGQPwJR8z1MmuPqspgj88HhFA",
+                authDomain: "jeevan-bca5.firebaseapp.com",
+                databaseURL: "https://jeevan-bca5.firebaseio.com",
+                projectId: "jeevan-bca5",
+                storageBucket: "jeevan-bca5.appspot.com",
+                messagingSenderId: "995284688874",
+                appId: "1:995284688874:web:dfab039070fa68f2fd5c93",
+                measurementId: "G-VEZNQWH17E"
+          };
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+    </script>
+    <script src="post_blood_request_js.js"></script>
+</body>
+</html>

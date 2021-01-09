@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="survey_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SURVEY</h1>
+        <h2>Choose the appropiate options:</h2>
+        <form id="survey">
+            <h4>Are you 18 - 65 years  old?</h4>
+            <input type="radio" id="yes1" name="age" value="yes">
+            <label for="yes1">Yes</label><br><br>
+            <input type="radio" id="no1" name="age" value="no">
+            <label for="no1">No</label><br><br>
+
+            <h4>Are you above 45kg?</h4>
+            <input type="radio" id="yes2" name="weight" value="yes">
+            <label for="yes2">Yes</label><br><br>
+            <input type="radio" id="no2" name="weight" value="no">
+            <label for="no2">No</label><br><br>
+
+            <h4>Are you generally in good health? (No symptoms of infection for at least one week, e.g. sore throat, cough, flu, diarrhoea, and no fever in the last 4 weeks)</h4>
+            <input type="radio" id="yes3" name="health" value="yes">
+            <label for="yes3">Yes</label><br><br>
+            <input type="radio" id="no3" name="health" value="no">
+            <label for="no3">No</label><br><br>
+
+            <h4>Are you pregnant or breastfeeding your child now?</h4>
+            <input type="radio" id="yes4" name="pregnant" value="yes">
+            <label for="yes4">Yes</label><br><br>
+            <input type="radio" id="no4" name="pregnant" value="no">
+            <label for="no4">No</label><br><br>
+
+            <h4>Have you done dental work recently?</h4>
+            <input type="radio" id="yes5" name="dental" value="yes">
+            <label for="yes5">Yes</label><br><br>
+            <input type="radio" id="no5" name="dental" value="no">
+            <label for="no5">No</label><br><br>
+
+            <h4>Have you taken herbal supplements or traditional herbal remedies recently?</h4>
+            <input type="radio" id="yes6" name="herbal" value="yes">
+            <label for="yes6">Yes</label><br><br>
+            <input type="radio" id="no6" name="herbal" value="no">
+            <label for="no6">No</label><br><br>
+
+            <h4>Have you had a piercing or a tattoo recently</h4>
+            <input type="radio" id="yes7" name="tattoo" value="yes">
+            <label for="yes7">Yes</label><br><br>
+            <input type="radio" id="no7" name="tattoo" value="no">
+            <label for="no7">No</label><br><br>
+
+            <h4>Do you have/had any of the mentioned below:</h4>
+            <input type="checkbox" id="Diabetes" name="diabetes" value="diabetes">
+            <label for="diabetes"> Diabetes</label><br>
+            <input type="checkbox" id="hypertension" name="hypertension" value="hypertension">
+            <label for="hypertension"> Hypertension</label><br>
+            <input type="checkbox" id="cancer" name="cancer" value="cancer">
+            <label for="cancer"> Cancer</label><br>
+            <input type="checkbox" id="cardiac" name="cardiac" value="cardiac">
+            <label for="cardiac"> Cardiac disease</label><br>
+            <input type="checkbox" id="lung" name="lung" value="lung">
+            <label for="lung"> Severe lung disease</label><br>
+            <input type="checkbox" id="hepatitis" name="hepatitis" value="hepatitis">
+            <label for="hepatitis"> Hepatitis B and C</label><br>
+            <input type="checkbox" id="hiv" name="hiv" value="hiv">
+            <label for="hiv"> HIV infection, AIDS or Sexually Transmitted Diseases (STD)</label><br>
+            <input type="checkbox" id="asthma" name="asthma" value="asthma">
+            <label for="asthma"> Have Allergy or Asthma</label><br>
+            <input type="checkbox" id="stroke" name="stroke" value="stroke">
+            <label for="stroke"> Ever had a coma or stroke?</label><br>
+            <input type="checkbox" id="problems" name="problems" value="problems">
+            <label for="problems"> ever had problems with your heart or lungs? ever had kidney or blood problems?</label><br>
+            <input type="checkbox" id="non" name="non" value="non">
+            <label for="non"> None of the above</label><br>
+            
+            <h4>do you have have a haemoglobin level of at least 13.0 g/dl for males and 12.5 g/dl for females?</h4>
+            <input type="radio" id="yes8" name="haemoglobin" value="yes">
+            <label for="yes8">Yes</label><br><br>
+            <input type="radio" id="no8" name="haemoglobin" value="no">
+            <label for="no8">No</label><br><br>
+
+            <h4>In the last 3 months have you taken any vaccination?</h4>
+            <input type="radio" id="yes9" name="3" value="yes">
+            <label for="yes9">Yes</label><br><br>
+            <input type="radio" id="no9" name="3" value="no">
+            <label for="no9">No</label><br><br>
+
+            <h4>In the last 6 months have you consulted a doctor for a health problem, had surgery or medical treatment?</h4>
+            <input type="radio" id="yes10" name="6" value="yes">
+            <label for="yes10">Yes</label><br><br>
+            <input type="radio" id="no10" name="6" value="no">
+            <label for="no10">No</label><br><br>
+            <br><br><br><br><br>
+            <input type="reset">
+            <input type="submit">
+        </form>
+    </div>
+    <script src="survey_app.js"></script>
+</body>
+</html>

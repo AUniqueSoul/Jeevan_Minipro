@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <link rel="stylesheet" href="patient_register_styles.css">
+</head>
+<body>
+    <h2 id="title">Patient Registration Form</h2>
+    <div class="container">
+        <form method="POST" id="signup-form">
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Email id</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="email" name="email" placeholder="Your username@email.com" title="Must contain username and email address. Eg. (example@example.com)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="off" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="psw">Password</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" id="psw" name="psw" size="16" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" onkeyup='check();' required><br>
+                    <input type="checkbox" onclick="showPass1()">Show Password
+                </div>
+            </div>
+            <div id="message">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>6 characters</b></p>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="conf_pswrd">Confirm Password</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" id="conf_pswrd" name="password" size="16" placeholder="Confirm Password" onkeyup='check();' required><br>
+                    <input type="checkbox" onclick="showPass2()">Show Password
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name.." size="10" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                </div>
+            </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="phno">Phone no</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="tel" id="phn" name="phno" size="15" maxlength="15" placeholder="+91-01234-56789" title="Must start with '+91' and contain two '-'. Eg. (+91-70025-79878)" autocomplete="off" pattern="[a-z0-9._%+-][0-9]{2}-[0-9]{5}-[0-9]{5}" required>
+                    </div>
+                  </div><br><br><br>
+                  <div class="row">
+                    <input type="submit" value="Submit" onclick="validatePassword()">
+                    <input type="reset" value="Reset">
+                  </div>
+            </div>
+        </form>
+    <div class="skip">
+            <a href="blood_categories.html">SKIP>>></a>
+    </div>
+    <script>
+          var firebaseConfig = {
+                apiKey: "AIzaSyB2tqT6i4RGQPwJR8z1MmuPqspgj88HhFA",
+                authDomain: "jeevan-bca5.firebaseapp.com",
+                databaseURL: "https://jeevan-bca5.firebaseio.com",
+                projectId: "jeevan-bca5",
+                storageBucket: "jeevan-bca5.appspot.com",
+                messagingSenderId: "995284688874",
+                appId: "1:995284688874:web:dfab039070fa68f2fd5c93",
+                measurementId: "G-VEZNQWH17E"
+          };
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+          const db = firebase.firestore();
+          const auth = firebase.auth();
+    </script>
+    <script src="patient_register_js1.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet"  href="admin_styles.css">
+</head>
+<body>
+    <h1>WELCOME ADMIN</h1>
+    <div class="container">
+        <div class="donors">
+            <h2>DONORS</h2>
+            <ul class="donor"></ul>
+        </div>
+        <div class="patients">
+            <h2>PATIENTS</h2>
+            <ul class="patient"></ul>
+        </div>
+        <div class="blood_rqsts">
+            <h2>BLOOD REQUESTS</h2>
+            <ul class="blood_rqst"></ul>
+        </div>
+    </div>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyB2tqT6i4RGQPwJR8z1MmuPqspgj88HhFA",
+          authDomain: "jeevan-bca5.firebaseapp.com",
+          databaseURL: "https://jeevan-bca5.firebaseio.com",
+          projectId: "jeevan-bca5",
+          storageBucket: "jeevan-bca5.appspot.com",
+          messagingSenderId: "995284688874",
+          appId: "1:995284688874:web:dfab039070fa68f2fd5c93",
+          measurementId: "G-VEZNQWH17E"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+      </script>
+      <script src="admin_app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Donors List</title>
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="donor_styles.css">
+    </head>
+    <body>
+
+        <h1>Donors List</h1>
+
+        <div class="content">
+
+            <form id="add-donor-form">
+			</form>
+
+            <ul id="donor-list"></ul>
+
+        </div>
+
+        <script>
+            var firebaseConfig = {
+            apiKey: "AIzaSyB2tqT6i4RGQPwJR8z1MmuPqspgj88HhFA",
+            authDomain: "jeevan-bca5.firebaseapp.com",
+            databaseURL: "https://jeevan-bca5.firebaseio.com",
+            projectId: "jeevan-bca5",
+            storageBucket: "jeevan-bca5.appspot.com",
+            messagingSenderId: "995284688874",
+            appId: "1:995284688874:web:dfab039070fa68f2fd5c93",
+            measurementId: "G-VEZNQWH17E"
+        };
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+			const db = firebase.firestore();
+		</script>		
+        <script src="donor_a-_js.js"></script>
+    </body>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="donor_register_styles.css">
+</head>
+<body>
+    <h2 id="title">Donor Registration Form</h2>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email id</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="email" name="email" placeholder="Your username@email.com" title="Must contain username and email address. Eg. (example@example.com)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="off" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="password">Password</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" id="psw" name="psw" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" onkeyup='check();' required><br>
+                    <input type="checkbox" onclick="showPass1()">Show Password
+                </div>
+            </div>
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>6 characters</b></p>
+                </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="conf_pswrd">Confirm Password</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" id="conf_pswrd" name="password" placeholder="Confirm Password" required><br>
+                    <input type="checkbox" onclick="showPass2()">Show Password
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="age">Age</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" id="age" name="age" placeholder="18-65" size="2" step="1" min="18" max="65">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="gender">Gender</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" id="m" name="gender" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="f" name="gender" value="Female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="o" name="gender" value="Other">
+                        <label for="other">Other</label><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                    <label for="bg">Blood Group</label>
+                    </div>
+                        <div class="col-75">
+                            <input type="radio" id="A+" name="bg" value="A+">
+                            <label for="A+">A+</label>
+                            <input type="radio" id="A-" name="bg" value="A-">
+                            <label for="A-">A-</label><br>
+                            <input type="radio" id="B+" name="bg" value="B+">
+                            <label for="B+">B+</label>
+                            <input type="radio" id="B-" name="bg" value="B-">
+                            <label for="B-">B-</label><br>
+                            <input type="radio" id="O+" name="bg" value="O+">
+                            <label for="O+">O+</label>
+                            <input type="radio" id="O-" name="bg" value="O-">
+                            <label for="O-">O-</label><br>
+                            <input type="radio" id="AB+" name="bg" value="AB+">
+                            <label for="AB+">AB+</label>
+                            <input type="radio" id="AB-" name="bg" value="AB-">
+                            <label for="AB-">AB-</label><br>
+                        </div>
+                 </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="phn">Phone no</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" id="phn" name="phno" size="15" maxlength="15" placeholder="+91-01234-56789" title="Must start with '+91' and contain two '-'. Eg. (+91-70025-79878)" autocomplete="off" pattern="[a-z0-9._%+-][0-9]{2}-[0-9]{5}-[0-9]{5}" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="addr">Address</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="addr" rows="3" cols="10"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="vehicle1">Availability</label><br>
+                    </div>
+                    <div class="col-75">
+                        <input type="checkbox" id="avail" checked/>
+                        <label for="vehicle1">Available</label><br>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="row">
+                        <input type="submit" value="Submit" onclick="storeData()">
+                        <input type="reset" value="Reset">
+                </div>
+        </form>
+    </div>
+    <script>
+          var firebaseConfig = {
+                apiKey: "AIzaSyB2tqT6i4RGQPwJR8z1MmuPqspgj88HhFA",
+                authDomain: "jeevan-bca5.firebaseapp.com",
+                databaseURL: "https://jeevan-bca5.firebaseio.com",
+                projectId: "jeevan-bca5",
+                storageBucket: "jeevan-bca5.appspot.com",
+                messagingSenderId: "995284688874",
+                appId: "1:995284688874:web:dfab039070fa68f2fd5c93",
+                measurementId: "G-VEZNQWH17E"
+          };
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+    </script>
+    <script src="donor_register_js.js"></script>
+</body>
+</html>

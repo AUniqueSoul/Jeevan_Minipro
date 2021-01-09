@@ -1,0 +1,35 @@
+.signup{
+    position: absolute;
+    top: 10%;
+    background-color: yellow;
+    padding: 40px 70px;
+}
+.signup h3{
+    color:red;
+}
+.login{
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    background-color: green;
+    padding: 40px 70px;
+}
+.login h3{
+    color: blue;
+}
+.container2{
+    position: absolute;
+    background-color: lightgrey;
+    padding: 100px 300px;
+    top: 50%;
+}
+.container{
+    position: relative;
+    margin-top: 30%;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    font-size: 20px;
+}

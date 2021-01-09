@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Donors List</title>
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="donor_styles.css">
+    </head>
+    <body>
+
+        <h1>Donors List</h1>
+        <div class="content">
+
+            <form id="add-donor-form">
+                <div class="sort">
+                    <label>Filter By: </label>
+                    <label for="filters1">Availability: </label>
+                    <input list="filters1" name="filter1" id="filter1" onChange="get_data1()">
+                        <datalist id="filters1">
+                        <option value="Availabe">
+                        <option value="Unavailable">
+                    </datalist>
+                    <label for="filters2">Gender: </label>
+                    <input list="filters2" name="filter2" id="filter2" onChange="get_data2()">
+                        <datalist id="filters2">
+                        <option value="Male">
+                        <option value="Female">
+                    </datalist>
+                    <label for="filters3">Locality: </label>
+                    <input list="filters3" name="filter3" id="filter3" onChange="get_data3()">
+                        <datalist id="filters3">
+                        <option value="Maligaon">
+                        <option value="Hatigaon">
+                        <option value="Zoo Road">
+                        <option value="Beltola">
+                        <option value="Chandmari">
+                        <option value="Dispur">
+                    </datalist>
+                </div>
+			</form>
+
+            <ul id="donor-list"></ul>
+        </div>
+
+        <script>
+            var firebaseConfig = {
+            apiKey: "AIzaSyB2tqT6i4RGQPwJR8z1MmuPqspgj88HhFA",
+            authDomain: "jeevan-bca5.firebaseapp.com",
+            databaseURL: "https://jeevan-bca5.firebaseio.com",
+            projectId: "jeevan-bca5",
+            storageBucket: "jeevan-bca5.appspot.com",
+            messagingSenderId: "995284688874",
+            appId: "1:995284688874:web:dfab039070fa68f2fd5c93",
+            measurementId: "G-VEZNQWH17E"
+        };
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+			const db = firebase.firestore();
+		</script>		
+        <script src="donor_b+_js.js"></script>
+    </body>
