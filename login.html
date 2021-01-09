@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <link rel="stylesheet"  href="login_styles.css">
+</head>
+<body>
+    <img class="wave" src="login_bg2.jpg">
+    <div class="container">
+        <div class="img">
+    </div>
+    <div class="login-content">
+    <form id="login-form">
+        <img src="user.png">
+        <h2 class="title">LOGIN</h2>
+            <div class="input-div one">
+              <div class="i">
+              <i class="fas fa-user"></i>
+              </div>
+              <div class="div">
+              <input type="text" class="input" placeholder="Email" id="login-email" required>
+              </div>
+            </div>
+            <div class="input-div pass">
+              <div class="i">
+                <i class="fas fa-lock"></i>
+              </div>
+              <div class="div">
+                <input type="password" class="input" placeholder="Password" id="login-pass" required>
+              </div>
+            </div>
+            <a href="#">Forgot Password?</a>
+            <input type="submit" class="btn" value="Login">
+            <input type="button" class="btn" id="signout" value="Logout">
+            </form>
+        </div>
+    </div>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyB2tqT6i4RGQPwJR8z1MmuPqspgj88HhFA",
+          authDomain: "jeevan-bca5.firebaseapp.com",
+          databaseURL: "https://jeevan-bca5.firebaseio.com",
+          projectId: "jeevan-bca5",
+          storageBucket: "jeevan-bca5.appspot.com",
+          messagingSenderId: "995284688874",
+          appId: "1:995284688874:web:dfab039070fa68f2fd5c93",
+          measurementId: "G-VEZNQWH17E"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+      </script>
+      <script src="login_js.js"></script>
+</body>
+</html>
