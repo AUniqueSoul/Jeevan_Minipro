@@ -18,6 +18,6 @@ v.addEventListener('submit', (e) => {
     }
     else {
         alert("Sorry, you are not eligible :(. Redirecting you to our homepage.");
-        window.open("home.html");  
+        window.open("index.html");  
     }
 });
