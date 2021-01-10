@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recover Password</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet"  href="forgot_psw_styles.css">
+</head>
+<body>
+    <div class="form-gap"></div>
+    <div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="text-center">
+                  <h3><i class="fa fa-lock fa-4x"></i></h3>
+                  <h2 class="text-center">Forgot Password?</h2>
+                  <p>Enter your email address here.</p>
+                  <div class="panel-body">
+                    <form id="register-form" role="form" class="form" method="post">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit">
+                      </div>
+                      <input type="hidden" class="hide" name="token" id="token" value=""> 
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
+</div>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyB2tqT6i4RGQPwJR8z1MmuPqspgj88HhFA",
+          authDomain: "jeevan-bca5.firebaseapp.com",
+          databaseURL: "https://jeevan-bca5.firebaseio.com",
+          projectId: "jeevan-bca5",
+          storageBucket: "jeevan-bca5.appspot.com",
+          messagingSenderId: "995284688874",
+          appId: "1:995284688874:web:dfab039070fa68f2fd5c93",
+          measurementId: "G-VEZNQWH17E"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+      </script>
+    <script src="forgot_psw_app.js"></script>
+</body>
+</html>
